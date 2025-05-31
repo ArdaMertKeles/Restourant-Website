@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+
+.main-header {
+  width: 100%;
+  height: 9.3vh;
+  padding: 1.5em 1.5em 1em 1.5em;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+.main-header .logo {
+  width: 10em;
+  height: 1.5em;
+  cursor: pointer;
+}
+.main-header .directives {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  gap: 1.5em;
+}
+.main-header .directives .directive {
+  padding: 0 10px 10px 10px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.main-header .directives .directive:hover {
+  border-bottom-color: #EFE8DF;
+  transition: 0.2s ease;
+}
+
+#black {
+  background-color: #EFE8DF;
+  color: black;
+}
+#black .directive:hover {
+  border-bottom-color: black;
+}
+
+#white {
+  background-color: transparent;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
