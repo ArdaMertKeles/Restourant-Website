@@ -85,4 +85,48 @@
 .reservation-wrapper .table-container .bottom-container .bottom-side svg {
   font-size: 3.5em;
   animation: scrollAnimation infinite 2s ease;
+}
+.reservation-wrapper .private-room-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  gap: 3vw;
+}
+.reservation-wrapper .private-room-container .room-box {
+  display: flex;
+  flex-direction: column;
+  width: 19vw;
+  height: 80vh;
+  background-color: black;
+}
+.reservation-wrapper .private-room-container .room-box img {
+  height: 45vh;
+  width: 19vw;
+}
+.reservation-wrapper .private-room-container .room-box .info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25vh;
+  color: #ffffff;
+  padding: 1em;
+}
+.reservation-wrapper .private-room-container .room-box .info-section .room-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reservation-wrapper .private-room-container .room-box .info-section .room-details .room-name {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.reservation-wrapper .private-room-container .room-box .info-section .room-details .room-info {
+  font-size: 0.6em;
+}
+.reservation-wrapper .private-room-container .room-box .info-section .details {
+  font-size: 0.9em;
+}
+.reservation-wrapper .private-room-container .room-box button {
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

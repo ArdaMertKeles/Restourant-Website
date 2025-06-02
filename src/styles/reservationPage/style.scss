@@ -88,4 +88,48 @@
             }
         }
     }
+    .private-room-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70vw;
+        gap: 3vw;
+        .room-box{
+            display: flex;
+            flex-direction: column;
+            width: 19vw;
+            height: 80vh;
+            background-color: black;
+            img{
+                height: 45vh;
+                width: 19vw;
+            }
+            .info-section{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 25vh;
+                color: #ffffff;
+                padding: 1em;
+                .room-details{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    .room-name{
+                        font-size: 1.5em;
+                        font-weight: 700;
+                    }
+                    .room-info{
+                        font-size: 0.6em;
+                    }
+                }
+                .details{
+                    font-size: 0.9em;
+                }
+            }
+            button{
+                width: 50%;
+            }
+        }
+    }
 }
