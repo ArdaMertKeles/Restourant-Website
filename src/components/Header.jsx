@@ -11,26 +11,25 @@ export const Header = () => {
 
     useEffect(() => {
         if (location.pathname === '/') {
-            console.log('selam')
-        } else if (location.pathname === '/terms-privacy-policy') {
+            setLogo(whiteLogo)
+        } else{
             setLogo(blackLogo)
-            console.log('as')
         }
     }, [location])
 
     return (
-        <div className="main-header" id={location.pathname === '/' ? 'white' : 'black'}>
+        <div className="main-header" id={location.pathname === '/' ? 'white' : 'black'} >
             <Link to={'/'}>
                 <img src={logo} alt="logo" className="logo" />
             </Link>
             <div className="directives">
-                <div className="directive">Menu</div>
-                <div className="directive">Take-Away</div>
-                <div className="directive">Reservation</div>
-                <div className="directive">Huma Bar</div>
-                <div className="directive">e-Vouchers</div>
-                <div className="directive">The Grand Trunk</div>
-                <div className="directive">Contact Us</div>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Menu</Link>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Take-Away</Link>
+                <Link to={'/reservation'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Reservation</Link>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Huma Bar</Link>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>e-Vouchers</Link>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>The Grand Trunk</Link>
+                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Contact Us</Link>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@ import './styles/style.css'
 import { Header } from './components/Header'
 import { HomePage } from "./pages/HomePage";
 import { TermsPage } from "./pages/TermsPage";
+import { ReservationPage } from "./pages/ReservationPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/terms-privacy-policy" element={<TermsPage />} />
+        <Route path="/reservation" element={<ReservationPage />} />
       </Routes>
     </Router>
   );

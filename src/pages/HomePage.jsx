@@ -1,12 +1,12 @@
 import Slider from "react-slick";
 import '../styles/homePage/style.css'
-import stock1 from '../assets/img/stock1.jpg'
-import stock3 from '../assets/img/stock3.jpg'
-import stock4 from '../assets/img/stock4.jpg'
-import stock5 from '../assets/img/stock5.jpg'
-import aboutFood from '../assets/img/aboutFood.jpg'
-import aboutPeople from '../assets/img/aboutPeople.jpg'
-import aboutPlace from '../assets/img/aboutPlace.jpg'
+import stock1 from '../assets/img/homePage/stock1.jpg'
+import stock3 from '../assets/img/homePage/stock3.jpg'
+import stock4 from '../assets/img/homePage/stock4.jpg'
+import stock5 from '../assets/img/homePage/stock5.jpg'
+import aboutFood from '../assets/img/homePage/aboutFood.jpg'
+import aboutPeople from '../assets/img/homePage/aboutPeople.jpg'
+import aboutPlace from '../assets/img/homePage/aboutPlace.jpg'
 import { Link } from "react-router-dom";
 
 export const HomePage = () => {
