@@ -98,7 +98,10 @@
   flex-direction: column;
   width: 19vw;
   height: 80vh;
-  background-color: black;
+  transition: 0.5s ease;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  overflow: hidden;
 }
 .reservation-wrapper .private-room-container .room-box img {
   height: 45vh;
@@ -125,8 +128,89 @@
   font-size: 0.6em;
 }
 .reservation-wrapper .private-room-container .room-box .info-section .details {
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 .reservation-wrapper .private-room-container .room-box button {
+  align-self: center;
   width: 50%;
+  font-size: 1.5rem;
+  padding: 4px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 1em;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.reservation-wrapper .private-room-container .room-box button:hover {
+  background-color: #CDFF1F;
+  transition: 0.2s ease;
+}
+.reservation-wrapper .private-room-container .room-box:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+}
+.reservation-wrapper .private-room-container .room-box:nth-child(1) {
+  background-color: #4169E1;
+}
+.reservation-wrapper .private-room-container .room-box:nth-child(2) {
+  background-color: #EBA832;
+}
+.reservation-wrapper .private-room-container .room-box:nth-child(3) {
+  background-color: #008000;
+}
+.reservation-wrapper .indulge-bar-container {
+  overflow: hidden;
+  background-image: url("../../assets/img/reservationPage/barImg.jpg");
+  height: 90vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4em 4em 3em 4em;
+  color: #ffffff;
+}
+.reservation-wrapper .indulge-bar-container .top-container {
+  width: 60%;
+}
+.reservation-wrapper .indulge-bar-container .top-container p:nth-child(1) {
+  font-size: 3em;
+  font-weight: 700;
+}
+.reservation-wrapper .indulge-bar-container .top-container p:nth-child(2) {
+  font-size: 1.25em;
+}
+.reservation-wrapper .indulge-bar-container button {
+  margin-bottom: 3rem;
+  width: 30%;
+  padding: 8px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.reservation-wrapper .indulge-bar-container button:hover {
+  background-color: rgb(231, 231, 31);
+  transition: 0.2s ease;
+}
+.reservation-wrapper .slider-container {
+  width: 100vw;
+}
+.reservation-wrapper .slider-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-wrapper .reservation-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFE8DF;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 1.5em;
 }/*# sourceMappingURL=style.css.map */

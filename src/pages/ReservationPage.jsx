@@ -1,10 +1,26 @@
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import Slider from 'react-slick';
 import '../styles/reservationPage/style.css'
 import littleImg1 from '../assets/img/reservationPage/littleImg1.jpg'
 import littleImg2 from '../assets/img/reservationPage/littleImg2.jpg'
 import littleImg3 from '../assets/img/reservationPage/littleImg3.jpg'
+import sliderImg1 from '../assets/img/reservationPage/slider1.jpg'
+import sliderImg2 from '../assets/img/reservationPage/slider2.jpg'
+import sliderImg3 from '../assets/img/reservationPage/slider3.jpg'
+import sliderImg4 from '../assets/img/reservationPage/slider4.jpg'
+import sliderImg5 from '../assets/img/reservationPage/slider5.jpg'
 
 export const ReservationPage = () => {
+
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        cssEase: "linear"
+    };
 
     return (
         <div className="reservation-wrapper">
@@ -30,7 +46,7 @@ export const ReservationPage = () => {
             <p className="article">Book a Private Room</p>
             <div className="private-room-container">
                 <div className="room-box">
-                    <img src={littleImg1} alt="" />
+                    <img src={littleImg1} alt="" loading='lazy' />
                     <div className="info-section">
                         <div className="room-details">
                             <div className="room-name">Polo Room</div>
@@ -44,7 +60,7 @@ export const ReservationPage = () => {
                     <button className="reservation">Reserve</button>
                 </div>
                 <div className="room-box">
-                    <img src={littleImg2} alt="" />
+                    <img src={littleImg2} alt="" loading='lazy' />
                     <div className="info-section">
                         <div className="room-details">
                             <div className="room-name">Wild Flower</div>
@@ -58,7 +74,7 @@ export const ReservationPage = () => {
                     <button className="reservation">Reserve</button>
                 </div>
                 <div className="room-box">
-                    <img src={littleImg3} alt="" />
+                    <img src={littleImg3} alt="" loading='lazy' />
                     <div className="info-section">
                         <div className="room-details">
                             <div className="room-name">Nilgiri</div>
@@ -74,9 +90,35 @@ export const ReservationPage = () => {
             </div>
             <p className="article">Indulge in our Bar!</p>
             <div className="indulge-bar-container">
-
+                <div className="top-container">
+                    <p>Edebe Barr</p>
+                    <p>Inspired by the spirit of the Forest from Turkish Mythology.</p>
+                </div>
+                <button>Reserve a Seat at the Bar</button>
             </div>
             <p className="article">Check Our Gallery</p>
+            <div className="slider-container">
+                <Slider {...settings}>
+                    <div>
+                        <img src={sliderImg1} alt="" loading='lazy' />
+                    </div>
+                    <div>
+                        <img src={sliderImg2} alt="" loading='lazy' />
+                    </div>
+                    <div>
+                        <img src={sliderImg3} alt="" loading='lazy' />
+                    </div>
+                    <div>
+                        <img src={sliderImg4} alt="" loading='lazy' />
+                    </div>
+                    <div>
+                        <img src={sliderImg5} alt="" loading='lazy' />
+                    </div>
+                </Slider>
+            </div>
+            <div className="reservation-footer">
+                <p>Tel: 0 555 555 55 55 | dine@inehsit.com.tr | ©2025 Inehsit. All Rights Reserved.</p>
+            </div>
         </div>
     )
 }

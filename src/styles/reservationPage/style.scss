@@ -1,13 +1,14 @@
-@keyframes scrollAnimation{
-    50%{
+@keyframes scrollAnimation {
+    50% {
         transform: translateY(100%);
     }
-    to{
+
+    to {
         transform: translateY(0);
     }
 }
 
-.reservation-wrapper{
+.reservation-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,12 +16,14 @@
     overflow-x: hidden;
     background-color: #EFE8DF;
     padding-top: 10.5vh;
-    .article{
+
+    .article {
         font-size: 2.5em;
         font-weight: 700;
         padding: 8px;
     }
-    .table-container{
+
+    .table-container {
         overflow: hidden;
         background-image: url('../../assets/img/reservationPage/bookImg.jpg');
         height: 90vh;
@@ -32,38 +35,45 @@
         justify-content: space-between;
         padding: 4em 4em 3em 4em;
         color: #ffffff;
-        .top-container{
+
+        .top-container {
             width: 60%;
             display: flex;
             justify-content: space-between;
-            .left-side{
+
+            .left-side {
                 display: flex;
                 flex-direction: column;
                 text-align: start;
-                p{
-                    &:nth-child(1){
+
+                p {
+                    &:nth-child(1) {
                         font-size: 3em;
                         font-weight: 700;
                     }
-                    &:nth-child(2){
+
+                    &:nth-child(2) {
                         font-size: 1.25em;
                     }
                 }
             }
-            .right-side{
+
+            .right-side {
                 width: 50%;
                 text-align: end;
                 font-size: 0.85em;
             }
         }
-        .bottom-container{
+
+        .bottom-container {
             width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
             height: 30%;
-            button{
+
+            button {
                 width: 70%;
                 padding: 8px;
                 border-radius: 14px;
@@ -72,64 +82,176 @@
                 font-weight: 600;
                 transition: 0.2s ease;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     background-color: rgb(231, 231, 31);
                     transition: 0.2s ease;
                 }
             }
-            .bottom-side{
+
+            .bottom-side {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                svg{
+
+                svg {
                     font-size: 3.5em;
                     animation: scrollAnimation infinite 2s ease;
                 }
             }
         }
     }
-    .private-room-container{
+
+    .private-room-container {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 70vw;
         gap: 3vw;
-        .room-box{
+
+        .room-box {
             display: flex;
             flex-direction: column;
             width: 19vw;
             height: 80vh;
-            background-color: black;
-            img{
+            transition: 0.5s ease;
+            border-top-left-radius: 1em;
+            border-top-right-radius: 1em;
+            overflow: hidden;
+
+            img {
                 height: 45vh;
                 width: 19vw;
             }
-            .info-section{
+
+            .info-section {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 height: 25vh;
                 color: #ffffff;
                 padding: 1em;
-                .room-details{
+
+                .room-details {
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
-                    .room-name{
+
+                    .room-name {
                         font-size: 1.5em;
                         font-weight: 700;
                     }
-                    .room-info{
+
+                    .room-info {
                         font-size: 0.6em;
                     }
                 }
-                .details{
-                    font-size: 0.9em;
+
+                .details {
+                    font-size: 0.8em;
                 }
             }
-            button{
+
+            button {
+                align-self: center;
                 width: 50%;
+                font-size: 1.5rem;
+                padding: 4px;
+                border-radius: 12px;
+                border: none;
+                margin-bottom: 1em;
+                transition: 0.2s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #CDFF1F;
+                    transition: 0.2s ease;
+                }
+            }
+
+            &:hover {
+                scale: 1.1;
+                transition: 0.5s ease;
+            }
+
+            &:nth-child(1) {
+                background-color: #4169E1;
+            }
+
+            &:nth-child(2) {
+                background-color: #EBA832;
+            }
+
+            &:nth-child(3) {
+                background-color: #008000;
             }
         }
+    }
+
+    .indulge-bar-container {
+        overflow: hidden;
+        background-image: url('../../assets/img/reservationPage/barImg.jpg');
+        height: 90vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4em 4em 3em 4em;
+        color: #ffffff;
+
+        .top-container {
+            width: 60%;
+
+            p {
+                &:nth-child(1) {
+                    font-size: 3em;
+                    font-weight: 700;
+                }
+
+                &:nth-child(2) {
+                    font-size: 1.25em;
+                }
+            }
+        }
+
+        button {
+            margin-bottom: 3rem;
+            width: 30%;
+            padding: 8px;
+            border-radius: 14px;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(231, 231, 31);
+                transition: 0.2s ease;
+            }
+        }
+    }
+
+    .slider-container {
+        width: 100vw;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .reservation-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EFE8DF;
+        width: 100%;
+        font-size: 0.8em;
+        padding: 1.5em;
     }
 }

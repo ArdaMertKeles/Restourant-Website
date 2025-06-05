@@ -24,7 +24,7 @@ export const Header = () => {
             </Link>
             <div className="directives">
                 <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Menu</Link>
-                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Take-Away</Link>
+                <Link to={'/take-away'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Take-Away</Link>
                 <Link to={'/reservation'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Reservation</Link>
                 <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Huma Bar</Link>
                 <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>e-Vouchers</Link>
