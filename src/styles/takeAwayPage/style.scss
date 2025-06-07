@@ -25,6 +25,79 @@
         .header-section{
             display: flex;
             flex-direction: column;
+            .top{
+                .date{
+                    background-color: #FFFFFF;
+                    padding: 0.75em 1em 0.75em 1em;
+                    border: 1px solid black;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #F2F2F2;
+                    }
+                }
+                .date-picker{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    background-color: #FFFFFF;
+                    padding: 1.25em;
+                    .top{
+                        display: flex;
+                        justify-content: space-between;
+                        p{
+                            font-size: 1.15em;
+                        }
+                    }
+                    .pick-from{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        p{
+                            &:nth-child(1){
+                                font-size: 0.8em;
+                            }
+                            &:nth-child(2){
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+                    .pick-time{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        padding-bottom: 1.25em;
+                        border-bottom: 1px solid lightgray;
+                        p{
+                            font-size: 0.8em;
+                        }
+                    }
+                    .buttons{
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 1em;
+                        button{
+                            width: 18%;
+                            padding: 0.8em 1.25em 0.8em 1.25em;
+                            transition: 0.2s ease;
+                            cursor: pointer;
+                            &:nth-child(1){
+                                background-color: #FFFFFF;
+                                color: #9C7C5C;
+                                border: 1px solid #9C7C5C;
+                            }
+                            &:nth-child(2){
+                                background-color: #9C7C5C;
+                                color: #FFFFFF;
+                                border: 1px solid transparent;
+                            }
+                            &:hover{
+                                opacity: 0.8;
+                                transition: 0.2s ease;
+                            }
+                        }
+                    }
+                }
+            }
             .bottom{
                 display: flex;
                 justify-content: space-between;

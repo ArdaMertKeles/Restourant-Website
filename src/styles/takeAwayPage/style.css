@@ -28,6 +28,75 @@
   display: flex;
   flex-direction: column;
 }
+.take-away-page-wrapper .main-container .header-section .top .date {
+  background-color: #FFFFFF;
+  padding: 0.75em 1em 0.75em 1em;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .top .date:hover {
+  background-color: #F2F2F2;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: #FFFFFF;
+  padding: 1.25em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .top {
+  display: flex;
+  justify-content: space-between;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .top p {
+  font-size: 1.15em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from p:nth-child(1) {
+  font-size: 0.8em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from p:nth-child(2) {
+  font-size: 0.9em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .pick-time {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid lightgray;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .pick-time p {
+  font-size: 0.8em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .buttons button {
+  width: 18%;
+  padding: 0.8em 1.25em 0.8em 1.25em;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .buttons button:nth-child(1) {
+  background-color: #FFFFFF;
+  color: #9C7C5C;
+  border: 1px solid #9C7C5C;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .buttons button:nth-child(2) {
+  background-color: #9C7C5C;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .buttons button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
 .take-away-page-wrapper .main-container .header-section .bottom {
   display: flex;
   justify-content: space-between;

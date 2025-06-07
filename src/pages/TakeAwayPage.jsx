@@ -20,6 +20,11 @@ import sweet5 from '../assets/img/takeAwayPage/sweet5.jpg'
 // Material UI Imports
 import { Backdrop } from '@mui/material'
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 // Imports
 import '../styles/takeAwayPage/style.css'
 import { useEffect, useRef, useState } from 'react'
@@ -182,6 +187,12 @@ export const TakeAwayPage = () => {
         refs[section].current.scrollIntoView({ behavior: 'smooth' });
     };
 
+    // TODOS
+    // REDUX TOOLKIT
+    // CART BACKDROP
+    // FOOD SLIDE
+    // ORDER PAGE
+
     return (
         <div className="take-away-page-wrapper">
             <p className='article'>Inehsit Online Take Away</p>
@@ -190,8 +201,27 @@ export const TakeAwayPage = () => {
                     <div className="top">
                         <button className="date" onClick={handleOpen}>Pickup Date</button>
                         <Backdrop open={open} onClick={handleClose} sx={{ zIndex: 3 }} >
-                            <div className="date-picker">
-
+                            <div className="date-picker" onClick={(e) => e.stopPropagation()}>
+                                <div className="top">
+                                    <p>How do you want to get your order?</p>
+                                    <CloseOutlinedIcon onClick={handleClose} />
+                                </div>
+                                <div className="pick-from">
+                                    <p>Pickup from</p>
+                                    <p>Turkey, Kilincarslan, Hamam Sk. 200/10, 07100 Muratpasa/Antalya</p>
+                                </div>
+                                <div className="pick-time">
+                                    <p>Pickup time</p>
+                                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                                        <DemoContainer components={['DatePicker']}>
+                                            <DatePicker label="Basic date picker" disablePast />
+                                        </DemoContainer>
+                                    </LocalizationProvider>
+                                </div>
+                                <div className="buttons">
+                                    <button className="cancel">Cancel</button>
+                                    <button className="save">Save</button>
+                                </div>
                             </div>
                         </Backdrop>
                     </div>
