@@ -1,0 +1,121 @@
+.take-away-page-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    overflow-x: hidden;
+    background-color: #EFE8DF;
+    padding-top: 10.5vh;
+    padding-bottom: 7vh;
+    .article{
+        font-size: 1.75em;
+        font-weight: 600;
+        padding: 8px;
+        &:nth-child(2){
+            font-size: 1.5em;
+            padding: 1rem 0 1rem 0;
+            font-weight: 500;
+        }
+    }
+    .main-container{
+        background-color: #FFFFFF;
+        width: 65%;
+        padding: 1em;
+        box-sizing: border-box;
+        .header-section{
+            display: flex;
+            flex-direction: column;
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid rgb(199, 199, 199);
+                .sections{
+                    display: flex;
+                    width: 60%;
+                    gap: 2%;
+                    label{
+                        cursor: pointer;
+                        input{
+                            display: none;
+                        }
+                        span{
+                            display: flex;
+                            align-items: center;
+                            padding: 1em;
+                        }
+                        &:hover{
+                            span{
+                                border-bottom: 2px solid gray;
+                            }
+                        }
+                    }
+                    input[type="radio"]:checked + span {
+                      border-bottom: 2px solid #d62828;
+                    }
+                }
+                .basket{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1em;
+                    transition: 0.2s ease;
+                    cursor: pointer;
+                    svg{
+                        font-size: 1.25em;
+                    }
+                    &:hover{
+                        color: rgb(123, 123, 123);
+                        transition: 0.2s ease;
+                    }
+                }
+            }
+        }
+        .section-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            .section{
+                display: flex;
+                flex-direction: column;
+                .wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6%;
+                }
+            }
+        }
+    }
+}
+
+// Food Box Container
+.food-box-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28%;
+    min-height: 55vh;
+    max-height: 55vh;
+    border: 1px solid lightgray;
+    margin-top: 2em;
+    cursor: pointer;
+    .details{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        box-sizing: border-box;
+        padding: 1em;
+        .food-name{
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .food-ingredients{
+            font-size: 0.8em;
+        }
+    }
+    .food-price{
+        padding: 1em;
+    }
+    &:hover{
+        background-color: rgb(239, 239, 239);
+        border-color: black;
+    }
+}

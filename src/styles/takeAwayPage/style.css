@@ -1,0 +1,118 @@
+.take-away-page-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  overflow-x: hidden;
+  background-color: #EFE8DF;
+  padding-top: 10.5vh;
+  padding-bottom: 7vh;
+}
+.take-away-page-wrapper .article {
+  font-size: 1.75em;
+  font-weight: 600;
+  padding: 8px;
+}
+.take-away-page-wrapper .article:nth-child(2) {
+  font-size: 1.5em;
+  padding: 1rem 0 1rem 0;
+  font-weight: 500;
+}
+.take-away-page-wrapper .main-container {
+  background-color: #FFFFFF;
+  width: 65%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.take-away-page-wrapper .main-container .header-section {
+  display: flex;
+  flex-direction: column;
+}
+.take-away-page-wrapper .main-container .header-section .bottom {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections {
+  display: flex;
+  width: 60%;
+  gap: 2%;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections label {
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections label input {
+  display: none;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections label span {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections label:hover span {
+  border-bottom: 2px solid gray;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .sections input[type=radio]:checked + span {
+  border-bottom: 2px solid #d62828;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket svg {
+  font-size: 1.25em;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket:hover {
+  color: rgb(123, 123, 123);
+  transition: 0.2s ease;
+}
+.take-away-page-wrapper .main-container .section-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.take-away-page-wrapper .main-container .section-wrapper .section {
+  display: flex;
+  flex-direction: column;
+}
+.take-away-page-wrapper .main-container .section-wrapper .section .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6%;
+}
+
+.food-box-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28%;
+  min-height: 55vh;
+  max-height: 55vh;
+  border: 1px solid lightgray;
+  margin-top: 2em;
+  cursor: pointer;
+}
+.food-box-container .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-sizing: border-box;
+  padding: 1em;
+}
+.food-box-container .details .food-name {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.food-box-container .details .food-ingredients {
+  font-size: 0.8em;
+}
+.food-box-container .food-price {
+  padding: 1em;
+}
+.food-box-container:hover {
+  background-color: rgb(239, 239, 239);
+  border-color: black;
+}/*# sourceMappingURL=style.css.map */
