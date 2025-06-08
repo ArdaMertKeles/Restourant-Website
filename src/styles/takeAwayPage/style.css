@@ -7,6 +7,7 @@
   background-color: #EFE8DF;
   padding-top: 10.5vh;
   padding-bottom: 7vh;
+  font-weight: 300;
 }
 .take-away-page-wrapper .article {
   font-size: 1.75em;
@@ -50,6 +51,15 @@
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .top p {
   font-size: 1.15em;
+  font-weight: 500;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .top svg {
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .top .date-picker .top svg:hover {
+  color: gray;
+  transition: 0.2s ease;
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from {
   display: flex;
@@ -58,6 +68,7 @@
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from p:nth-child(1) {
   font-size: 0.8em;
+  font-weight: 500;
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .pick-from p:nth-child(2) {
   font-size: 0.9em;
@@ -71,6 +82,7 @@
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .pick-time p {
   font-size: 0.8em;
+  font-weight: 500;
 }
 .take-away-page-wrapper .main-container .header-section .top .date-picker .buttons {
   display: flex;
@@ -124,18 +136,42 @@
 .take-away-page-wrapper .main-container .header-section .bottom .sections input[type=radio]:checked + span {
   border-bottom: 2px solid #d62828;
 }
-.take-away-page-wrapper .main-container .header-section .bottom .basket {
+.take-away-page-wrapper .main-container .header-section .bottom .basket-empty {
   display: flex;
   align-items: center;
   font-size: 1em;
   transition: 0.2s ease;
+  padding: 0 1em 0 1em;
+  margin-bottom: 1em;
   cursor: pointer;
 }
-.take-away-page-wrapper .main-container .header-section .bottom .basket svg {
+.take-away-page-wrapper .main-container .header-section .bottom .basket-empty .cart {
+  display: none;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket-empty svg {
   font-size: 1.25em;
 }
-.take-away-page-wrapper .main-container .header-section .bottom .basket:hover {
+.take-away-page-wrapper .main-container .header-section .bottom .basket-empty:hover {
   color: rgb(123, 123, 123);
+  transition: 0.2s ease;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket-filled {
+  background-color: #9C7C5C;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0 1em 0 1em;
+  margin-bottom: 1em;
+  gap: 6px;
+  font-size: 1em;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket-filled svg {
+  font-size: 1.25em;
+}
+.take-away-page-wrapper .main-container .header-section .bottom .basket-filled:hover {
+  opacity: 0.8;
   transition: 0.2s ease;
 }
 .take-away-page-wrapper .main-container .section-wrapper {
@@ -153,13 +189,113 @@
   gap: 6%;
 }
 
+.food-box {
+  width: 28%;
+  min-height: 55vh;
+  max-height: 55vh;
+}
+.food-box .food-cart {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 35%;
+  height: 90%;
+  position: relative;
+}
+.food-box .food-cart .top {
+  height: 70%;
+}
+.food-box .food-cart .top img {
+  width: 100%;
+  height: 100%;
+}
+.food-box .food-cart .top svg {
+  font-size: 2em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.food-box .food-cart .top svg:hover {
+  background-color: #EFE8DF;
+  transition: 0.2s ease;
+}
+.food-box .food-cart .middle {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  height: 7%;
+}
+.food-box .food-cart .middle p:nth-child(1) {
+  font-size: 1.15em;
+  font-weight: 600;
+}
+.food-box .food-cart .middle p:nth-child(2) {
+  font-size: 0.9em;
+}
+.food-box .food-cart .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid lightgray;
+  padding: 1em;
+  gap: 3%;
+  height: 15%;
+}
+.food-box .food-cart .bottom .amount-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  color: gray;
+  width: 15%;
+  height: 80%;
+  padding: 0 6px 0 6px;
+}
+.food-box .food-cart .bottom .amount-button button {
+  border: none;
+  font-size: 1.5em;
+  color: gray;
+  cursor: pointer;
+}
+.food-box .food-cart .bottom .amount-button button:disabled {
+  color: rgb(172, 172, 172);
+}
+.food-box .food-cart .bottom .amount-button button:disabled:hover {
+  color: rgb(172, 172, 172);
+}
+.food-box .food-cart .bottom .amount-button button:hover {
+  color: black;
+}
+.food-box .food-cart .bottom .amount-button p {
+  font-size: 1.25em;
+}
+.food-box .food-cart .bottom .amount-button:hover {
+  border-color: black;
+}
+.food-box .food-cart .bottom .add-btn {
+  height: 80%;
+  border: 1px solid transparent;
+  background-color: #9C7C5C;
+  color: #FFFFFF;
+  width: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.food-box .food-cart .bottom .add-btn:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
 .food-box-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 28%;
-  min-height: 55vh;
-  max-height: 55vh;
   border: 1px solid lightgray;
   margin-top: 2em;
   cursor: pointer;
@@ -184,4 +320,95 @@
 .food-box-container:hover {
   background-color: rgb(239, 239, 239);
   border-color: black;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25vw;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.drawer .section {
+  display: flex;
+  flex-direction: column;
+}
+.drawer .section .top-side {
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.drawer .section .items {
+  display: flex;
+  flex-direction: column;
+}
+.drawer .section .items .alert {
+  align-self: center;
+  font-size: 0.65em;
+  color: gray;
+  padding: 10px 0 20px 0;
+}
+.drawer .section .items .item-box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 2px;
+}
+.drawer .section .items .item-box .details {
+  display: flex;
+  justify-content: space-between;
+}
+.drawer .section .items .item-box .remove {
+  font-size: 0.7em;
+  color: #9C7C5C;
+  cursor: pointer;
+}
+.drawer .section .items .item-box .remove:hover {
+  opacity: 0.8;
+}
+.drawer .section .note-button {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  text-align: left;
+  padding: 1em;
+  background-color: #FFFFFF;
+  color: #9C7C5C;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.drawer .section .note-button:hover {
+  background-color: #efefef;
+}
+.drawer .section .input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+  padding: 1em;
+}
+.drawer .section .input-section p {
+  font-size: 0.8em;
+}
+.drawer .section .input-section input {
+  width: 70%;
+  padding: 10px;
+}
+.drawer .section .prices {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.drawer .section .prices .price {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */

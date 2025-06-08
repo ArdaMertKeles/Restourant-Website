@@ -25,15 +25,24 @@ import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import Drawer from '@mui/material/Drawer';
 // Imports
 import '../styles/takeAwayPage/style.css'
 import { useEffect, useRef, useState } from 'react'
 import { FoodBox } from '../components/takeAwayPage/FoodBox'
+import dayjs from 'dayjs'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeFromCart } from '../redux/features'
+import NoteInputOrButton from '../components/takeAwayPage/NoteInputOrButton'
 
 export const TakeAwayPage = () => {
 
     const [selectedSection, setSelectedSection] = useState('')
     const [open, setOpen] = useState(false)
+    const [date, setDate] = useState('')
+    const [pickDate, setPickDate] = useState('')
+    const [cartData, setCartData] = useState([])
+    const [drawer, setDrawer] = useState(false)
 
     const handleClose = () => {
         setOpen(false);
@@ -45,34 +54,46 @@ export const TakeAwayPage = () => {
     const largeRef = useRef(null);
     const smallRef = useRef(null);
     const sweetRef = useRef(null);
+    const dispatch = useDispatch()
+
+    const data = useSelector((state) => state.featuresCheck.cart)
+
+    useEffect(() => {
+        setCartData(data)
+    }, [data])
 
     // Plate Objectation Arrays
     const largePlatesArr = [
         {
+            id: 1,
             name: 'Lamb Steak',
             ingredients: 'Lamb Meat | Salad',
             price: 29.99,
             img: large1
         },
         {
+            id: 2,
             name: 'Mey Rice',
             ingredients: 'Meyhane Rice | Potato | Fried Chicken',
             price: 19.99,
             img: large2
         },
         {
+            id: 3,
             name: 'Faroz Pide',
             ingredients: 'Meat Pide | Salad',
             price: 14.99,
             img: large3
         },
         {
-            name: 'Pasta with Chicken',
+            id: 4,
+            name: 'Chicken Alfredo',
             ingredients: 'Sauced Pasta | Chicken | Salad',
             price: 14.99,
             img: large4
         },
         {
+            id: 5,
             name: 'Maras Tava',
             ingredients: 'Pasta | Meat Kebab',
             price: 29.99,
@@ -82,36 +103,42 @@ export const TakeAwayPage = () => {
 
     const smallPlatesArr = [
         {
+            id: 6,
             name: 'Fried Squid',
             ingredients: 'Squid | Sauce',
             price: 9.99,
             img: small1
         },
         {
+            id: 7,
             name: 'Krep',
             ingredients: 'Krep | Accompanists',
             price: 7.99,
             img: small2
         },
         {
+            id: 8,
             name: 'Icli Kofte',
             ingredients: 'Meatball | Sauce',
             price: 7.99,
             img: small3
         },
         {
+            id: 9,
             name: 'Vegetable Soup',
             ingredients: 'Broccoli | Cauliflower | Carrot | Onion',
             price: 3.99,
             img: small4
         },
         {
+            id: 10,
             name: 'Egg Royal',
             ingredients: 'Egg | Bacon | Sauce',
             price: 4.99,
             img: small5
         },
         {
+            id: 11,
             name: 'Gumus Plate',
             ingredients: 'Bacon | Rice | Fried Bread',
             price: 5.99,
@@ -121,30 +148,35 @@ export const TakeAwayPage = () => {
 
     const sweetPlatesArr = [
         {
+            id: 12,
             name: 'Coconut Cookie',
             ingredients: 'Coconut Powder | Chocolate',
             price: 2.99,
             img: sweet1
         },
         {
+            id: 13,
             name: 'Raspberry Pie',
             ingredients: 'Raspberry | Cream',
             price: 3.99,
             img: sweet2
         },
         {
+            id: 14,
             name: 'Pancakes',
             ingredients: 'Pancake | Strawberry, Berries',
             price: 2.99,
             img: sweet3
         },
         {
+            id: 15,
             name: 'Turkish Waffle',
             ingredients: 'Mini Waffles | Turkish Ice Cream',
             price: 4.99,
             img: sweet4
         },
         {
+            id: 16,
             name: 'Fruit Table',
             ingredients: 'Strawberry | Blackberry',
             price: 1.99,
@@ -187,19 +219,13 @@ export const TakeAwayPage = () => {
         refs[section].current.scrollIntoView({ behavior: 'smooth' });
     };
 
-    // TODOS
-    // REDUX TOOLKIT
-    // CART BACKDROP
-    // FOOD SLIDE
-    // ORDER PAGE
-
     return (
         <div className="take-away-page-wrapper">
             <p className='article'>Inehsit Online Take Away</p>
             <div className="main-container">
                 <div className="header-section">
                     <div className="top">
-                        <button className="date" onClick={handleOpen}>Pickup Date</button>
+                        <button className="date" onClick={handleOpen}>Pickup Date {pickDate}</button>
                         <Backdrop open={open} onClick={handleClose} sx={{ zIndex: 3 }} >
                             <div className="date-picker" onClick={(e) => e.stopPropagation()}>
                                 <div className="top">
@@ -214,13 +240,13 @@ export const TakeAwayPage = () => {
                                     <p>Pickup time</p>
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DemoContainer components={['DatePicker']}>
-                                            <DatePicker label="Basic date picker" disablePast />
+                                            <DatePicker label="Basic date picker" disablePast onChange={(e) => setDate(dayjs(e).format("DD/MM/YYYY"))} />
                                         </DemoContainer>
                                     </LocalizationProvider>
                                 </div>
                                 <div className="buttons">
-                                    <button className="cancel">Cancel</button>
-                                    <button className="save">Save</button>
+                                    <button className="cancel" onClick={handleClose}>Cancel</button>
+                                    <button className="save" onClick={() => { setPickDate(date); handleClose() }}>Save</button>
                                 </div>
                             </div>
                         </Backdrop>
@@ -255,10 +281,49 @@ export const TakeAwayPage = () => {
                                 <span>Sweet Plates</span>
                             </label>
                         </div>
-                        <span className='basket'>
+                        <div onClick={() => setDrawer(true)} className={cartData.length === 0 ? 'basket-empty' : 'basket-filled'}>
+                            <p className='cart'>View Cart</p>
                             <ShoppingBasketOutlinedIcon />
-                            <p>0</p>
-                        </span>
+                            <p>{cartData.length}</p>
+                        </div>
+                        <Drawer
+                            anchor={'right'}
+                            open={drawer}
+                            onClose={() => setDrawer(false)}
+                        >
+                            <div className="drawer">
+                                <div className="section">
+                                    <div className="top-side">
+                                        <p>My Order ({cartData.length})</p>
+                                        <CloseOutlinedIcon />
+                                    </div>
+                                    <div className="items">
+                                        {cartData.map((item, key) => (
+                                            <div className="item-box" key={key}>
+                                                <div className="details">
+                                                    <p>{item.name}</p>
+                                                    <p>${item.price}</p>
+                                                </div>
+                                                <p onClick={() => dispatch(removeFromCart(item))} className='remove'>Remove</p>
+                                            </div>
+                                        ))}
+                                        {cartData.length === 0 && <p className='alert'>Browse our menu and start adding items to your order</p>}
+                                    </div>
+                                    <NoteInputOrButton />
+                                    <div className="prices">
+                                        <div className="price">
+                                            <p>Subtotal:</p>
+                                            <p>${cartData.reduce((sum, item) => sum + item.price, 0)}</p>
+                                        </div>
+                                        {cartData.length >= 1 && <div className="price">
+                                            <p>Tax:</p>
+                                            <p>$5.99</p>
+                                        </div>}
+                                    </div>
+                                </div>
+                                <button disabled={cartData.length === 0 ? true : false}>Continue to Checkout</button>
+                            </div>
+                        </Drawer>
                     </div>
                 </div>
                 <p className='article'>Inehsit</p>
@@ -266,16 +331,16 @@ export const TakeAwayPage = () => {
                     <div className="section" ref={largeRef}>
                         <p>Large Plates</p>
                         <div className="wrapper">
-                            {largePlatesArr.map((food) => (
-                                <FoodBox food={food} />
+                            {largePlatesArr.map((food, key) => (
+                                <FoodBox food={food} key={key} />
                             ))}
                         </div>
                     </div>
                     <div className="section" ref={smallRef}>
                         <p>Small Plates</p>
                         <div className="wrapper">
-                            {smallPlatesArr.map((food) => (
-                                <FoodBox food={food} />
+                            {smallPlatesArr.map((food, key) => (
+                                <FoodBox food={food} key={key} />
                             ))}
                         </div>
                     </div>
@@ -283,8 +348,8 @@ export const TakeAwayPage = () => {
                         <p>Sweet Plates</p>
                         <hr />
                         <div className="wrapper">
-                            {sweetPlatesArr.map((food) => (
-                                <FoodBox food={food} />
+                            {sweetPlatesArr.map((food, key) => (
+                                <FoodBox food={food} key={key} />
                             ))}
                         </div>
                     </div>
