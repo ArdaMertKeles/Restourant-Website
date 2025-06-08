@@ -6,6 +6,7 @@ import { HomePage } from "./pages/HomePage";
 import { TermsPage } from "./pages/TermsPage";
 import { ReservationPage } from "./pages/ReservationPage";
 import { TakeAwayPage } from './pages/TakeAwayPage'
+import { BarPage } from "./pages/BarPage";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/terms-privacy-policy" element={<TermsPage />} />
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/take-away" element={<TakeAwayPage />} />
+        <Route path="/bar" element={<BarPage />} />
       </Routes>
     </Router>
   );

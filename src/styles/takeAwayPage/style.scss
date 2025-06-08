@@ -200,6 +200,7 @@
     width: 28%;
     min-height: 55vh;
     max-height: 55vh;
+    margin-top: 2em;
     .food-cart{
         display: flex;
         flex-direction: column;
@@ -305,7 +306,7 @@
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid lightgray;
-    margin-top: 2em;
+    height: 100%;
     cursor: pointer;
     .details{
         display: flex;
@@ -416,6 +417,26 @@
             .price{
                 display: flex;
                 justify-content: space-between;
+            }
+        }
+    }
+    .continue-btn{
+        padding: 1em;
+        margin: 1.25em;
+        background-color: #9C7C5C;
+        border: 1px solid transparent;
+        color: #FFFFFF;
+        transition: 0.2s ease;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+            transition: 0.2s ease;
+        }
+        &:disabled{
+            background-color: #a1a1a1;
+            cursor: default;
+            &:hover{
+                opacity: 1;
             }
         }
     }

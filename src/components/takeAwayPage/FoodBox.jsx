@@ -45,11 +45,14 @@ export const FoodBox = ({ food }) => {
                             <button onClick={() => setAmount(amount + 1)}>+</button>
                         </div>
                         <button className='add-btn' onClick={() => {
-                            const items = Array.from({ length: amount }, () => food);
+                            const items = Array.from({ length: amount }, () => ({
+                                ...food,
+                                id: Math.random()
+                            }));
                             dispatch(setCart(items));
                             handleClose()
                         }}
-                        >Add to my order {amount * food.price}</button>
+                        >Add to my order {Math.floor(amount * food.price) + .99}</button>
                     </div>
                 </div>
             </Backdrop>

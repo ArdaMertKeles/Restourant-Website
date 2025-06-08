@@ -65,35 +65,30 @@ export const TakeAwayPage = () => {
     // Plate Objectation Arrays
     const largePlatesArr = [
         {
-            id: 1,
             name: 'Lamb Steak',
             ingredients: 'Lamb Meat | Salad',
             price: 29.99,
             img: large1
         },
         {
-            id: 2,
             name: 'Mey Rice',
             ingredients: 'Meyhane Rice | Potato | Fried Chicken',
             price: 19.99,
             img: large2
         },
         {
-            id: 3,
             name: 'Faroz Pide',
             ingredients: 'Meat Pide | Salad',
             price: 14.99,
             img: large3
         },
         {
-            id: 4,
             name: 'Chicken Alfredo',
             ingredients: 'Sauced Pasta | Chicken | Salad',
             price: 14.99,
             img: large4
         },
         {
-            id: 5,
             name: 'Maras Tava',
             ingredients: 'Pasta | Meat Kebab',
             price: 29.99,
@@ -103,42 +98,36 @@ export const TakeAwayPage = () => {
 
     const smallPlatesArr = [
         {
-            id: 6,
             name: 'Fried Squid',
             ingredients: 'Squid | Sauce',
             price: 9.99,
             img: small1
         },
         {
-            id: 7,
             name: 'Krep',
             ingredients: 'Krep | Accompanists',
             price: 7.99,
             img: small2
         },
         {
-            id: 8,
             name: 'Icli Kofte',
             ingredients: 'Meatball | Sauce',
             price: 7.99,
             img: small3
         },
         {
-            id: 9,
             name: 'Vegetable Soup',
             ingredients: 'Broccoli | Cauliflower | Carrot | Onion',
             price: 3.99,
             img: small4
         },
         {
-            id: 10,
             name: 'Egg Royal',
             ingredients: 'Egg | Bacon | Sauce',
             price: 4.99,
             img: small5
         },
         {
-            id: 11,
             name: 'Gumus Plate',
             ingredients: 'Bacon | Rice | Fried Bread',
             price: 5.99,
@@ -148,35 +137,30 @@ export const TakeAwayPage = () => {
 
     const sweetPlatesArr = [
         {
-            id: 12,
             name: 'Coconut Cookie',
             ingredients: 'Coconut Powder | Chocolate',
             price: 2.99,
             img: sweet1
         },
         {
-            id: 13,
             name: 'Raspberry Pie',
             ingredients: 'Raspberry | Cream',
             price: 3.99,
             img: sweet2
         },
         {
-            id: 14,
             name: 'Pancakes',
             ingredients: 'Pancake | Strawberry, Berries',
             price: 2.99,
             img: sweet3
         },
         {
-            id: 15,
             name: 'Turkish Waffle',
             ingredients: 'Mini Waffles | Turkish Ice Cream',
             price: 4.99,
             img: sweet4
         },
         {
-            id: 16,
             name: 'Fruit Table',
             ingredients: 'Strawberry | Blackberry',
             price: 1.99,
@@ -321,7 +305,7 @@ export const TakeAwayPage = () => {
                                         </div>}
                                     </div>
                                 </div>
-                                <button disabled={cartData.length === 0 ? true : false}>Continue to Checkout</button>
+                                <button disabled={cartData.length === 0 ? true : false} className='continue-btn'>Continue to Checkout</button>
                             </div>
                         </Drawer>
                     </div>
@@ -346,7 +330,6 @@ export const TakeAwayPage = () => {
                     </div>
                     <div className="section" ref={sweetRef}>
                         <p>Sweet Plates</p>
-                        <hr />
                         <div className="wrapper">
                             {sweetPlatesArr.map((food, key) => (
                                 <FoodBox food={food} key={key} />
