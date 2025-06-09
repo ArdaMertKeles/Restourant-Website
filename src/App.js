@@ -7,6 +7,7 @@ import { TermsPage } from "./pages/TermsPage";
 import { ReservationPage } from "./pages/ReservationPage";
 import { TakeAwayPage } from './pages/TakeAwayPage'
 import { BarPage } from "./pages/BarPage";
+import { VoucherPage } from "./pages/VoucherPage";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/take-away" element={<TakeAwayPage />} />
         <Route path="/bar" element={<BarPage />} />
+        <Route path="/e-voucher" element={<VoucherPage />} />
       </Routes>
     </Router>
   );

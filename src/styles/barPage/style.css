@@ -1,0 +1,58 @@
+.bar-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.bar-page-wrapper .main-container {
+  height: 90vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #FFFFFF;
+  padding-top: 10.5vh;
+  background-image: url("../../assets/img/barPage/barImg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bar-page-wrapper .main-container p {
+  padding-bottom: 10vh;
+  font-size: 2em;
+  width: 30%;
+  text-align: center;
+}
+.bar-page-wrapper .huma-container {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1385' height='166.2' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='7.7' stroke-opacity='0.16'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bar-page-wrapper .huma-container .left-side {
+  width: 30%;
+  color: #FFFFFF;
+}
+.bar-page-wrapper .huma-container .left-side .article {
+  font-size: 3em;
+  font-weight: 600;
+}
+.bar-page-wrapper .huma-container .left-side .detail {
+  font-size: 1.15em;
+  word-spacing: 2px;
+}
+.bar-page-wrapper .huma-container img {
+  width: 30%;
+  height: 50%;
+}
+
+.bar-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFE8DF;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 1.5em;
+}/*# sourceMappingURL=style.css.map */

@@ -27,7 +27,7 @@ export const Header = () => {
                 <Link to={'/take-away'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Take-Away</Link>
                 <Link to={'/reservation'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Reservation</Link>
                 <Link to={'/bar'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Huma Bar</Link>
-                <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>e-Vouchers</Link>
+                <Link to={'/e-voucher'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>e-Vouchers</Link>
                 <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>The Grand Trunk</Link>
                 <Link to={'/'} className="directive" id={location.pathname === '/' ? 'white' : 'black'}>Contact Us</Link>
             </div>
