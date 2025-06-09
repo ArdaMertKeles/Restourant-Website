@@ -1,1 +1,183 @@
-/*# sourceMappingURL=style.css.map */
+.voucher-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #EFE8DF;
+  padding-top: 10.5vh;
+  padding-bottom: 10.5vh;
+}
+.voucher-page-wrapper h1 {
+  font-weight: 500;
+}
+.voucher-page-wrapper .container {
+  display: flex;
+  gap: 2vw;
+  width: 50%;
+}
+.voucher-page-wrapper .container .left-side .img-container {
+  width: 22vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
+}
+.voucher-page-wrapper .container .left-side .img-container img {
+  width: 100%;
+  transition: 0.4s ease;
+}
+.voucher-page-wrapper .container .left-side .img-container img:hover {
+  scale: 1.1;
+  transition: 0.4s ease;
+}
+.voucher-page-wrapper .container .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.voucher-page-wrapper .container .right-side .article {
+  font-weight: 700;
+}
+.voucher-page-wrapper .container .right-side .price {
+  font-weight: 700;
+}
+.voucher-page-wrapper .container .right-side .terms {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.voucher-page-wrapper .container .right-side .denomination, .voucher-page-wrapper .container .right-side .who {
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.voucher-page-wrapper .container .right-side .prices {
+  display: flex;
+  gap: 1vw;
+}
+.voucher-page-wrapper .container .right-side .prices input {
+  display: none;
+}
+.voucher-page-wrapper .container .right-side .prices span {
+  letter-spacing: 0;
+  font-size: 0.85em;
+  padding: 6px 4px 6px 4px;
+  border: 1px solid rgb(93, 93, 93);
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.voucher-page-wrapper .container .right-side .prices span:hover {
+  border-color: black;
+}
+.voucher-page-wrapper .container .right-side .prices input[type=radio]:checked + span {
+  border-color: #9c8976;
+}
+.voucher-page-wrapper .container .right-side .quantity {
+  margin-top: 1em;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+.voucher-page-wrapper .container .right-side .amount-button {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  color: black;
+  width: 20%;
+  height: 80%;
+  padding: 0 6px 0 6px;
+}
+.voucher-page-wrapper .container .right-side .amount-button button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: black;
+  cursor: pointer;
+}
+.voucher-page-wrapper .container .right-side .amount-button button:disabled {
+  color: rgb(172, 172, 172);
+}
+.voucher-page-wrapper .container .right-side .amount-button p {
+  font-size: 1em;
+  font-weight: 300;
+}
+.voucher-page-wrapper .container .right-side .amount-button:hover {
+  border-color: black;
+}
+.voucher-page-wrapper .container .right-side .classifer {
+  display: flex;
+  justify-content: space-between;
+}
+.voucher-page-wrapper .container .right-side .classifer label {
+  width: 48%;
+}
+.voucher-page-wrapper .container .right-side .classifer label .radio-label {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(89, 89, 89);
+  width: 100%;
+  padding: 1em;
+  font-size: 0.8em;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.voucher-page-wrapper .container .right-side .classifer label .radio-label:hover {
+  border-color: black;
+}
+.voucher-page-wrapper .container .right-side .classifer label input {
+  display: none;
+}
+.voucher-page-wrapper .container .right-side .classifer label input[type=radio]:checked + .radio-label {
+  border: 1px solid #9c8976;
+}
+.voucher-page-wrapper .container .right-side .someone-else-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.voucher-page-wrapper .container .right-side .someone-else-container label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8em;
+}
+.voucher-page-wrapper .container .right-side .someone-else-container label input {
+  padding: 4px;
+}
+.voucher-page-wrapper .container .right-side .someone-else-container label textarea {
+  padding: 6px;
+  height: 5em;
+  resize: none;
+}
+.voucher-page-wrapper .container .right-side .someone-else-container #submit {
+  display: none;
+}
+.voucher-page-wrapper .container .right-side .buy-btn {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-weight: 300;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: black;
+  color: #FFFFFF;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.voucher-page-wrapper .container .right-side .buy-btn:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+
+.voucher-footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFE8DF;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 1.5em;
+}/*# sourceMappingURL=style.css.map */
