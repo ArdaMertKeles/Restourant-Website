@@ -1,0 +1,41 @@
+.contact-us-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #EFE8DF;
+  padding-top: 10.5vh;
+  height: 100vh;
+  font-size: 0.8em;
+}
+.contact-us-wrapper .left-side {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-us-wrapper .left-side .article {
+  font-weight: 700;
+  text-decoration: underline;
+  padding-top: 2em;
+}
+.contact-us-wrapper .left-side .contact-details {
+  padding-top: 1em;
+}
+.contact-us-wrapper .left-side i {
+  padding-top: 1em;
+}
+.contact-us-wrapper .left-side .time {
+  padding-left: 1em;
+}
+
+.contact-footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFE8DF;
+  width: 100%;
+  font-size: 0.8em;
+  padding: 1.5em;
+}/*# sourceMappingURL=style.css.map */
