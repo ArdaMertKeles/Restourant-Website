@@ -9,6 +9,7 @@ import { TakeAwayPage } from './pages/TakeAwayPage'
 import { BarPage } from "./pages/BarPage";
 import { VoucherPage } from "./pages/VoucherPage";
 import { ContactUsPage } from "./pages/ContactUsPage";
+import { MenuPage } from "./pages/MenuPage";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/bar" element={<BarPage />} />
         <Route path="/e-voucher" element={<VoucherPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/menu" element={<MenuPage />} />
       </Routes>
     </Router>
   );
